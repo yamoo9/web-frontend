@@ -4,6 +4,9 @@
   "name": "web-frontend",
   "description": "웹 프론트엔드 학습",
   "license": "MIT",
+  "scripts": {
+    "start": "npx live-server client"
+  },
   "author": {
     "name": "yamoo9",
     "email": "yamoo9@euid.dev",
