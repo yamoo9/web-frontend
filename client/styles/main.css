@@ -1,18 +1,26 @@
-/* CSS Rules */
-
 body {
-  /* 상속: inheritance */
-  color: #3633ED;
+  padding: 4rem;
 }
 
-div[class="target"] {
-  margin-bottom: 20px;
-  padding: 30px;
-  color: #382f33;
-  background-color: #2b0016; 
+.image-frame {
+  display: inline-block;
+  margin: 0 12px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 8px 8px rgba(59, 105, 83, 0.22);
+  border-radius: 12px;
 }
 
-div[id="unique-target"] h2 {
-  margin-top: 0;
-  margin-bottom: 0;
+.image-frame img {
+  width: 450px;
+  height: 300px;
+  border: 1px solid #E9E9E9;
+}
+
+.image-frame figcaption {
+  color: #35624d;
+  font-size: 14px;
+  font-family: 'Pretendard';
+  font-weight: 500;
+  line-height: 1.2; /* 120% */
 }
