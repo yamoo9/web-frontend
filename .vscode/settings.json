@@ -59,6 +59,9 @@
   "html.validate.scripts": true,
   "html.validate.styles": true,
 
+  "htmlhint.documentSelector": ["html", "htm"],
+  "htmlhint.enable": true,
+
   "css.completion.completePropertyWithSemicolon": true,
   "css.lint.unknownAtRules": "ignore",
   "css.validate": true,
