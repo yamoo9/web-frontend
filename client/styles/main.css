@@ -1,0 +1,18 @@
+/* CSS Rules */
+
+body {
+  /* 상속: inheritance */
+  color: #3633ED;
+}
+
+div[class="target"] {
+  margin-bottom: 20px;
+  padding: 30px;
+  color: #382f33;
+  background-color: #2b0016; 
+}
+
+div[id="unique-target"] h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
