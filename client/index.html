@@ -6,61 +6,81 @@
     <title>웹 프론트엔드</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="클라이언트 사이드 프로그래밍을 처리하는 개발 환경에 대해 학습합니다." />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
+    <link
+      as="style"
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+      crossorigin />
     <link rel="icon" href="assets/favicon.svg" />
     <link rel="stylesheet" href="styles/main.css" />
   </head>
 
   <body>
-    <figure class="image-frame">
-      <img
-        src="assets/landscape-01.jpg"
-        alt="Khwaeng Wat Arun, Krung Thep Maha Nakhon, 태국"
-        height="300"
-        width="450" />
-      <figcaption>태국의 어느 서원 (2021년 촬영)</figcaption>
-    </figure>
 
-    <figure class="image-frame">
-      <img
-        src="assets/landscape-02.jpg"
-        alt="Tambon Pak Nam, จ.กระบี่, 태국"
-        height="300"
-        width="450" />
-      <figcaption>태국의 어느 산 정경 (2017년 촬영)</figcaption>
-    </figure>
-
-    <hr style="margin: 40px; border: 0.1px solid #2b2833" />
-
-
-    <div class="container">
-      <div class="box">01</div>
-      <div class="box" style="position: relative; z-index: 10; right: -20px; bottom: -20px;">02</div>
-      <div class="box" style="position: relative; right: 40px; top: -40px;">03</div>
-      <div class="box">04</div>
-      <div class="box" style="position: fixed; top: 30px; right: 30px; background: rgba(255 255 255 / 20%)">05</div>
-      <div class="box">06</div>
-    </div>
-
-
-    <hr style="margin: 40px; border: 0.1px solid #2b2833" />
-
-    <h1>프론트엔드 개발 프로세스 2022년</h1>
+    <h1 class="headline">프론트엔드 개발</h1>
 
     <div id="unique-target" class="target">
       <h2>HTML 마크업</h2>
       <h3>HTML 작성 규칙</h3>
+      <h3>시멘틱 마크업 (Semantic Markup)</h3>
+      <p>HTML(HyperText Markup Language)은 웹사이트 콘텐츠를 설명하는데 사용되는 마크업 언어로 콘텐츠 의미를 설명하는데 유일한 목적을 가집니다.</p>
+      <p>비주얼 디자인(모양, 색, 크기 등)이 목표가 아니라, 구조 설계(Structure Design)를 목표로 합니다.</p>
+      <h4>표 설계 (table design)</h4>
+      <p>정보를 제공하는 표는 필히 _________ 를 제공해야 합니다.</p>
+      <p>가급적 표는 _________ 않도록 설계해야 합니다. 표는 _________ 하기 때문입니다.</p>
+      <h4>폼 설계 (form design)</h4>
+      <p>_________는 입력 필드의 _________ 입니다.</p>
+      <p>입력 필드와 _________ 을 연결하기 위해서는 _________ 속성이 필요합니다.</p>
     </div>
 
     <div class="target">
       <h2>CSS Styling</h2>
+
+      <div role="group" class="image-frames">
+        <figure class="image-frame">
+          <img
+            src="assets/landscape-01.jpg"
+            alt="Khwaeng Wat Arun, Krung Thep Maha Nakhon, 태국"
+            height="300"
+            width="450" />
+          <figcaption>태국의 어느 서원 (2021년 촬영)</figcaption>
+        </figure>
+
+        <figure class="image-frame">
+          <img
+            src="assets/landscape-02.jpg"
+            alt="Tambon Pak Nam, จ.กระบี่, 태국"
+            height="300"
+            width="450" />
+          <figcaption>태국의 어느 산 정경 (2017년 촬영)</figcaption>
+        </figure>
+      </div>
+
+      <pre style="white-space: pre-line">
+        - 하이퍼링크(앵커) 요소
+        - 목록 구조 (웹 표준 기술 사양)
+        - 웹 표준이 아닌 HTML 요소
+        - 표, 폼 요소 (웹 접근성)
+        - 인라인 vs. 블록 요소 (텍스트 정렬)
+        - Flexbox 레이아웃 기술 사양
+        - 반응형 웹 (미디어쿼리: 컨트라스트, 모션 등)
+        - CSS 수학 함수
+      </pre>
+
+      
+
+      <div class="container">
+        <div class="box">01</div>
+        <div class="box" style="position: relative; z-index: 10; right: -20px; bottom: -20px;">02</div>
+        <div class="box" style="position: relative; right: 40px; top: -40px;">03</div>
+        <div class="box">04</div>
+        <div class="box" style="position: fixed; top: 30px; right: 30px; background: rgba(255 255 255 / 20%)">05</div>
+        <div class="box">06</div>
+      </div>
+
     </div>
 
-    <h2>JavaScript 인터랙션 프로그래밍</h2>
-
-    <h2>시멘틱 마크업 (Semantic Markup)</h2>
-    <p>HTML(HyperText Markup Language)은 웹사이트 콘텐츠를 설명하는데 사용되는 마크업 언어로 콘텐츠 의미를 설명하는데 유일한 목적을 가집니다.</p>
-    <p>비주얼 디자인(모양, 색, 크기 등)이 목표가 아니라, 구조 설계(Structure Design)를 목표로 합니다.</p>
+    <h2>JavaScript 프로그래밍</h2>
 
   </body>
 
