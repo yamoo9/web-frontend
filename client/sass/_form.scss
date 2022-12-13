@@ -1,0 +1,34 @@
+.form {
+  margin: 40px 0;
+}
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 12px 0;
+  padding: 0.4em;
+  gap: 4px;
+}
+
+.buttonGroup {
+  display: inline-flex;
+  width: clamp(200px, 50vw, 340px);
+  border-radius: 50px;
+  background: #111;
+  color: #fff;
+}
+
+.buttonGroup button {
+  cursor: pointer;
+  flex: 1;
+  border: 0;
+  padding: 0.8em 1.2em;
+  font-weight: 700;
+  background: transparent;
+  color: inherit;
+}
+
+.buttonGroup button:first-child {
+  border-right: 1px solid currentColor;
+}

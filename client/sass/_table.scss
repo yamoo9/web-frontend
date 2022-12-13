@@ -1,0 +1,20 @@
+.table {
+  border: 1px solid var(--gray--500);
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table th {
+  background: var(--gray--100);
+}
+
+.table th,
+.table td {
+  border: 0.1px solid var(--gray--500);
+  padding: 0.4em 0.8em;
+  font-size: 14px;
+}
+
+.table ul {
+  padding: 1em;
+}

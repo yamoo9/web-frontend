@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "version": "0.0.1",
+  "name": "web-frontend",
+  "description": "웹 프론트엔드 학습",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server client --host=localhost --port=3000",
+    "dev": "npm start -- --no-browser",
+    "htmlhint": "htmlhint \"**/*.html\"",
+    "imagemin": "imagemin client/assets/* -o client/assets/minified",
+    "compile:sass": "sass client/styles:client/css",
+    "watch:sass": "npm run compile:sass -- --watch",
+    "build:sass": "sass client/styles:client/build --style=compressed --no-source-map"
+  },
+  "author": {
+    "name": "yamoo9",
+    "email": "yamoo9@euid.dev",
+    "url": "https://euid.dev"
+  },
+  "devDependencies": {
+    "htmlhint": "1.1.4",
+    "imagemin-cli": "7.0.0",
+    "live-server": "1.2.2",
+    "sass": "1.56.2"
+  }
+}

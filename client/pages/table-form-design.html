@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <title>표 &amp; 폼 디자인 - 웹 프론트엔드</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    as="style"
+    rel="stylesheet"
+    href="//cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    crossorigin 
+  />
+  <link rel="icon" href="/assets/favicon.svg" />
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+
+  <h1 lang="en">Table &amp; Form Design</h1>
+
+  <nav>
+    <h2 class="a11yHidden">페이지 탐색 리스트</h2>
+    <ul>
+      <li>
+        <a href="/">홈</a>
+      </li>
+      <li>
+        <a href="/pages/introduction.html">소개</a>
+      </li>
+      <li>
+        <a>표 디자인</a>
+      </li>
+    </ul>
+  </nav>
+
+  <table class="table">
+    <caption class="a11yHidden">학습 시간표</caption>
+    <tr>
+      <th>차수</th>
+      <th scope="col">학습 주제</th>
+      <th scope="col">시간</th>
+    </tr>
+    <tr>
+      <th scope="row">1일차</th>
+      <td>
+        <ul>
+          <li>웹 프로그래밍 이해</li>
+          <li>웹 표준과 접근성</li>
+          <li>HTML 마크업</li>
+          <li>CSS 스타일링</li>
+        </ul>
+      </td>
+      <td>8<span title="시간" aria-label="시간">H</span></td>
+    </tr>
+    <tr>
+      <th>2일차</th>
+      <td>
+        <ul>
+          <li>JavaScript 프로그래밍</li>
+          <li>DOM API / 이벤트 핸들링</li>
+          <li>객체 지향, 함수 프로그래밍</li>
+          <li>비동기 통신 / 처리</li>
+        </ul>
+      </td>
+      <td>8<span title="시간" aria-label="시간">H</span></td>
+    </tr>
+    <tr>
+      <th>3일차</th>
+      <td>
+        <!-- Emmet (Zen Coding) : wrap with abbrebiation -->
+        <ul>
+          <li>Node.js 런타임 환경</li>
+          <li>Express 프레임워크</li>
+          <li>Front-end 개발 환경</li>
+          <li>React UI 라이브러리 I</li>
+        </ul>
+      </td>
+      <td>8<span title="시간" aria-label="시간">H</span></td>
+    </tr>
+  </table>
+
+  <form class="form">
+
+    <div role="group" class="formControl">
+      <label for="user-email">이메일</label>
+      <input id="user-email" type="email" placeholder="user@company.io" />
+    </div>
+    
+    <div class="formControl">
+      <label for="user-password">패스워드</label>
+      <input id="user-password" type="password" placeholder="영문,숫자 조합 5자리 이상" />
+    </div>
+    
+    <div class="formControl">
+      <label for="user-password-confirm">패스워드 (확인)</label>
+      <input id="user-password-confirm" type="password" placeholder="입력한 패스워드 다시 입력" />
+    </div>
+
+    <div role="group" class="buttonGroup">
+      <button type="submit">저장</button>
+      <button type="reset">초기화</button>
+    </div>
+
+  </form>
+  
+</body>
+</html>

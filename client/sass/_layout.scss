@@ -1,0 +1,52 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+  border: 3px solid rgba(59, 105, 83, 0.22);
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: white;
+}
+
+.box.detect-theme {
+  --fg: #111;
+  --bg: #eee;
+
+  color: var(--fg);
+  background-color: var(--bg);
+  animation: spin 1s infinite alternate;
+}
+
+@keyframes spin {
+  0% {
+    transform: perspective(600px) rotateX(0deg);
+  }
+  50% {
+    transform: perspective(600px) rotateX(200deg);
+  }
+  100% {
+    transform: perspective(600px) rotateX(-360deg);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .box.detect-theme {
+    --fg: #eee;
+    --bg: #111;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .box.detect-theme {
+    border: 6px solid #3b6953;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .box.detect-theme {
+    animation-play-state: paused;
+  }
+}
