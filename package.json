@@ -8,7 +8,8 @@
     "start": "live-server client --host=localhost --port=3000",
     "dev": "npm start -- --no-browser",
     "htmlhint": "htmlhint \"**/*.html\"",
-    "imagemin": "imagemin client/assets/* -o client/assets/minified"
+    "imagemin": "imagemin client/assets/* -o client/assets/minified",
+    "compile:sass": "sass client/styles:client/css"
   },
   "author": {
     "name": "yamoo9",
@@ -17,6 +18,8 @@
   },
   "devDependencies": {
     "htmlhint": "1.1.4",
-    "live-server": "1.2.2"
+    "imagemin-cli": "7.0.0",
+    "live-server": "1.2.2",
+    "sass": "1.56.2"
   }
 }

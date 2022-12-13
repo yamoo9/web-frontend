@@ -1,4 +1,3 @@
-/* Global Scope */
 :root {
   --white: #fefefe;
   --black: #010101;
@@ -52,7 +51,7 @@
 body {
   width: 1200px;
   margin: 100px auto;
-  font: 1rem/1.5 'Pretendard';
+  font: 1rem/1.5 "Pretendard";
 }
 
 h1,
@@ -127,27 +126,6 @@ p {
   border-right: 1px solid currentColor;
 }
 
-.a11yHidden {
-  overflow: hidden;
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  clip-path: inset(50%);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-}
-
-caption.a11yHidden {
-  position: static;
-}
-
-.deco-strike {
-  text-decoration: line-through;
-}
-
 .box {
   display: flex;
   justify-content: center;
@@ -165,7 +143,6 @@ caption.a11yHidden {
   translate: -20px -120px;
   rotate: -10deg;
 } */
-
 .image-frame {
   display: inline-block;
   margin: 0 12px;
@@ -183,7 +160,7 @@ caption.a11yHidden {
 }
 
 .image-frame::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -8px;
   left: 10px;
@@ -195,7 +172,7 @@ caption.a11yHidden {
 }
 
 .image-frame::after {
-  content: '';
+  content: "";
   position: absolute;
   right: -10px;
   bottom: -2px;
@@ -223,3 +200,9 @@ caption.a11yHidden {
   font-weight: 500;
   color: #35624d;
 }
+
+.deco-strike {
+  text-decoration: line-through;
+}
+
+/*# sourceMappingURL=main.css.map */

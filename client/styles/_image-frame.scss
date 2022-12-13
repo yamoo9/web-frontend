@@ -1,0 +1,62 @@
+/* .image-frames {
+  translate: -20px -120px;
+  rotate: -10deg;
+} */
+
+.image-frame {
+  display: inline-block;
+  margin: 0 12px;
+  border-radius: 12px;
+  padding: 10px;
+  background: #ffffff;
+  transition: all 0.6s cubic-bezier(0.4, -0.07, 0.27, 1.48);
+  box-shadow: 0px 8px 8px rgba(59, 105, 83, 0.22);
+  rotate: -2.65deg;
+}
+
+.image-frame:nth-of-type(2) {
+  rotate: 6.123deg;
+  translate: -42px -24px;
+}
+
+.image-frame::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  width: 20px;
+  height: 54px;
+  background: url(../assets/scotch-01.png);
+  background-size: contain;
+  rotate: 218deg;
+}
+
+.image-frame::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  bottom: -2px;
+  width: 40px;
+  height: 31px;
+  background: url(../assets/scotch-02.png) no-repeat;
+  background-size: contain;
+  rotate: 328deg;
+}
+
+.image-frame:hover {
+  scale: 1.2;
+  rotate: 0deg;
+}
+
+.image-frame img {
+  width: 225px;
+  height: 150px;
+  border: 1px solid #e9e9e9;
+}
+
+.image-frame figcaption {
+  line-height: 1.2; /* 120% */
+  font-size: 14px;
+  font-weight: 500;
+  color: #35624d;
+}
