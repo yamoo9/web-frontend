@@ -22,3 +22,4 @@
 - [caniuse.com](https://caniuse.com)
 - [browserslist.dev](https://browserslist.dev/)
 - [browserslist - full list](https://github.com/browserslist/browserslist#full-list)
+- [미디어 쿼리 사용하기 - MDN](https://developer.mozilla.org/ko/docs/Web/CSS/Media_Queries/Using_media_queries)

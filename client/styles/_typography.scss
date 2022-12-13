@@ -1,0 +1,10 @@
+abbr[title] {
+  cursor: help;
+  text-decoration: none;
+}
+
+@media print {
+  abbr[title]::after {
+    content: ' - ' abbr(title);
+  }
+}
