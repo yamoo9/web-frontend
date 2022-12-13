@@ -5,8 +5,9 @@
   "description": "웹 프론트엔드 학습",
   "license": "MIT",
   "scripts": {
-    "start": "npx live-server client",
-    "htmlhint": "npx htmlhint \"**/*.html\""
+    "start": "live-server client --host=localhost --port=3000",
+    "dev": "npm start -- --no-browser",
+    "htmlhint": "htmlhint \"**/*.html\""
   },
   "author": {
     "name": "yamoo9",
@@ -14,6 +15,7 @@
     "url": "https://euid.dev"
   },
   "devDependencies": {
-    "htmlhint": "1.1.4"
+    "htmlhint": "1.1.4",
+    "live-server": "1.2.2"
   }
 }

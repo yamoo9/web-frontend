@@ -11,13 +11,39 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
       crossorigin />
-    <link rel="icon" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href="/styles/main.css" />
   </head>
 
   <body>
 
     <h1 class="headline">프론트엔드 개발</h1>
+
+    <!-- section, article, nav, aside -->
+    <nav>
+      <h2>페이지 탐색 리스트</h2>
+      <ul>
+        <li>
+          <a>홈</a>
+        </li>
+        <li>
+          <!-- focusable vs. tabbable -->
+          <!-- <div onclick="confirm('키보드 접근이 가능한가요?')">div 클릭 요소</div> -->
+          <a href="/pages/introduction.html">소개</a>
+        </li>
+        <li>
+          <!-- external link -->
+          <a
+            href="https://reactjs.org"
+            title="React 웹 사이트로 이동 (새 탭)" 
+            rel="noopener noreferrer"
+            target="_blank" 
+          >
+            React
+          </a>
+        </li>
+      </ul>
+    </nav>
 
     <div id="unique-target" class="target">
       <h2>HTML 마크업</h2>
@@ -56,18 +82,16 @@
         </figure>
       </div>
 
-      <pre style="white-space: pre-line">
-        - 하이퍼링크(앵커) 요소
-        - 목록 구조 (웹 표준 기술 사양)
-        - 웹 표준이 아닌 HTML 요소
-        - 표, 폼 요소 (웹 접근성)
-        - 인라인 vs. 블록 요소 (텍스트 정렬)
-        - Flexbox 레이아웃 기술 사양
-        - 반응형 웹 (미디어쿼리: 컨트라스트, 모션 등)
-        - CSS 수학 함수
-      </pre>
-
-      
+      <ul>
+        <li>하이퍼링크(앵커) 요소</li>
+        <li>목록 구조 (웹 표준 기술 사양)</li>
+        <li>웹 표준이 아닌 HTML 요소</li>
+        <li>표, 폼 요소 (웹 접근성)</li>
+        <li>인라인 vs. 블록 요소 (텍스트 정렬)</li>
+        <li>Flexbox 레이아웃 기술 사양</li>
+        <li>반응형 웹 (미디어쿼리: 컨트라스트, 모션 등)</li>
+        <li>CSS 수학 함수</li>
+      </ul>
 
       <div class="container">
         <div class="box">01</div>
