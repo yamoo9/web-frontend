@@ -4,7 +4,10 @@ body {
   font: 1rem/1.5 'Pretendard';
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin-top: 24px;
   margin-bottom: 12px;
   font-weight: 500;
@@ -15,6 +18,23 @@ p {
   margin-bottom: 8px;
   font-weight: 200;
   font-size: 14px;
+}
+
+.a11yHidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.deco-strike {
+  text-decoration: line-through;
 }
 
 .box {
@@ -83,7 +103,7 @@ p {
 .image-frame img {
   width: 225px;
   height: 150px;
-  border: 1px solid #E9E9E9;
+  border: 1px solid #e9e9e9;
 }
 
 .image-frame figcaption {
