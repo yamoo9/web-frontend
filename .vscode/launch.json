@@ -1,21 +1,21 @@
 {
   "configurations": [
     {
-      "name": "Web(chrome) 브라우저 디버깅",
-      "cwd": "${workspaceFolder}",
-      "skipFiles": ["<node_internals>/**"],
-      "url": "http://localhost:6006",
-      "webRoot": "${workspaceFolder}",
+      "type": "node",
       "request": "launch",
-      "type": "chrome"
-    },
-    {
       "name": "Node.js 런타임 디버깅",
       "cwd": "${workspaceFolder}",
-      "skipFiles": ["<node_internals>/**"],
       "program": "${file}",
+      "skipFiles": ["<node_internals>/**"],
+    },
+    {
+      "type": "chrome",
       "request": "launch",
-      "type": "node"
-    }
+      "name": "Web(chrome) 브라우저 디버깅",
+      "url": "http://localhost:6006",
+      "webRoot": "${workspaceFolder}",
+      "cwd": "${workspaceFolder}",
+      "skipFiles": ["<node_internals>/**"],
+    },
   ]
 }

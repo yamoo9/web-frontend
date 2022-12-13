@@ -9,9 +9,9 @@
     "dev": "npm start -- --no-browser",
     "htmlhint": "htmlhint \"**/*.html\"",
     "imagemin": "imagemin client/assets/* -o client/assets/minified",
-    "compile:sass": "sass client/styles:client/css",
+    "compile:sass": "sass client/sass:client/css",
     "watch:sass": "npm run compile:sass -- --watch",
-    "build:sass": "sass client/styles:client/build --style=compressed --no-source-map"
+    "build:sass": "sass client/sass:client/build --style=compressed --no-source-map"
   },
   "author": {
     "name": "yamoo9",

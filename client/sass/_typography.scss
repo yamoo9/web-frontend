@@ -5,6 +5,6 @@ abbr[title] {
 
 @media print {
   abbr[title]::after {
-    content: ' - ' abbr(title);
+    content: ' (' attr(title) ')';
   }
 }
