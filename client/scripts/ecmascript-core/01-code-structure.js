@@ -11,10 +11,16 @@ console.log('ECMAScript의 `문`은 어떠한 작업을 수행하는 문법 구�
 */
 
 // 세미콜론 (semicolons)
-console.log('다음 줄애서 코드를 작성 할 경우, 세미콜론을 붙인 것과 동일합니다.')
-console.log('하지만 세미콜론을 명시적으로 추가할 것을 권장합니다.')
+console.log('다음 줄애서 코드를 작성 할 경우, 세미콜론을 붙인 것과 동일합니다.');
+console.log('하지만 세미콜론을 명시적으로 추가할 것을 권장합니다.');
 
-console.log('예를 들어 작성된 세미콜론이 없는 코드를 압축할 경우...')
+// ES - 브라우저에서 실시간(런타임 중) 해석(통역)되는 인터프리터 언어
+console.log('예를 들어 작성된 세미콜론이 없는 코드를 압축할 경우...');
 ('어떤 일이 발생할까요?');
 
 
+// 모듈(재사용 가능한 관심이 유사한 코드 묶음)
+// 기본 내보내기(export default)
+export default function hello() {
+  console.log('Hello');
+}

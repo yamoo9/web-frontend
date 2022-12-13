@@ -6,18 +6,31 @@
 
 // - 갯수 별 상품 가격 계산하기
 // - 구매 제품 가격의 총 합
-// - 1년 기준 일자 수
 // - 구매 결제 여부
 // - 구매 결제 내역
-// - 브랜드 접두사
 // - 오늘의 운세
-// - 상품 정보
 
 
 
 /* variables ----------------------------------------------------------- */
+// 앱 런타임 중에 값이 변경 가능
+// - 상품 정보
+let productInfo = {
+  name: '제로 콜라',
+  price: 1_400
+}
 
+console.log(productInfo);
 
+productInfo.name = 'Zero Coke';
+
+console.log(productInfo);
 
 /* constant variables -------------------------------------------------- */
+// 앱 런타임 중에 값이 변경 불가능
+// - 1년 기준 일자 수
+// - 브랜드 접두사
+const BRAND_PREFIX = 'SAMSUNG';
+
+
 

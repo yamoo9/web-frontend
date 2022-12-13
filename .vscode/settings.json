@@ -69,7 +69,7 @@
   "editor.inlayHints.enabled": "offUnlessPressed",
 
   "javascript.format.enable": false,
-  "javascript.validate.enable": true,
+  "javascript.validate.enable": false,
   "javascript.autoClosingTags": true,
   "javascript.format.insertSpaceAfterSemicolonInForStatements": true,
   "javascript.inlayHints.parameterNames.enabled": "all",
