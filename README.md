@@ -16,3 +16,9 @@
 - [ ] Front-end 개발 환경
 - [ ] React UI 라이브러리
 - [ ] Next.js 프레임워크
+
+## 참고 사이트
+
+- [caniuse.com](https://caniuse.com)
+- [browserslist.dev](https://browserslist.dev/)
+- [browserslist - full list](https://github.com/browserslist/browserslist#full-list)

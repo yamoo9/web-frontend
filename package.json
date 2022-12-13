@@ -7,7 +7,8 @@
   "scripts": {
     "start": "live-server client --host=localhost --port=3000",
     "dev": "npm start -- --no-browser",
-    "htmlhint": "htmlhint \"**/*.html\""
+    "htmlhint": "htmlhint \"**/*.html\"",
+    "imagemin": "imagemin client/assets/* -o client/assets/minified"
   },
   "author": {
     "name": "yamoo9",
