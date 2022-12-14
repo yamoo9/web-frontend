@@ -1,0 +1,55 @@
+{
+  "type": "module",
+  "private": true,
+  "version": "0.0.1",
+  "name": "web-frontend",
+  "description": "웹 프론트엔드 학습",
+  "license": "MIT",
+  "config": {
+    "assets": {
+      "input": "src/assets/*",
+      "output": "public/assets"
+    },
+    "sass": {
+      "input": "src/sass",
+      "output": "public/css"
+    },
+    "babel": {
+      "input": "src",
+      "output": "public/scripts"
+    }
+  },
+  "scripts": {
+    "start": "run-p serve watch",
+    "dev": "run-p serve:dev watch",
+    "serve": "live-server public --host=localhost --port=3000",
+    "serve:dev": "npm run serve -- --no-browser",
+    "html:hint": "htmlhint \"public/**/*.html\"",
+    "image:min": "cross-var imagemin $npm_package_config_assets_input --out-dir=$npm_package_config_assets_output",
+    "compile": "run-p compile:*",
+    "watch": "run-p watch:*",
+    "compile:sass": "cross-var sass $npm_package_config_sass_input:$npm_package_config_sass_output --style=compressed",
+    "watch:sass": "npm run compile:sass -- --watch",
+    "compile:babel": "cross-var babel $npm_package_config_babel_input -d $npm_package_config_babel_output",
+    "watch:babel": "npm run compile:babel -- --watch"
+  },
+  "author": {
+    "name": "yamoo9",
+    "email": "yamoo9@euid.dev",
+    "url": "https://euid.dev"
+  },
+  "dependencies": {
+    "core-js": "3.26.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.19.3",
+    "@babel/core": "7.20.5",
+    "@babel/preset-env": "7.20.2",
+    "cross-var": "1.1.0",
+    "htmlhint": "1.1.4",
+    "imagemin-cli": "7.0.0",
+    "live-server": "1.2.2",
+    "npm-run-all": "4.1.5",
+    "sass": "1.56.2"
+  }
+}
