@@ -25,3 +25,5 @@
 - [미디어 쿼리 사용하기 - MDN](https://developer.mozilla.org/ko/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [React 모듈 호출 참고 (Dan Abramov Tweet)](https://twitter.com/dan_abramov/status/1308739731551858689?s=20&t=XzW98N9-HXPSSHyTEllZ3w)
 - [Tree Shaking (Webpack Module Bundler)](https://webpack.js.org/guides/tree-shaking)
+- [ES2015 브라우저 지원 상황](https://caniuse.com/es6)
+- [ECMAScript 버전 호환 표](https://kangax.github.io/compat-table/es2016plus/)

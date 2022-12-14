@@ -30,5 +30,3 @@ console.log(receivedEmailAddress);
 
 // || → 첫번째 Truthy 값을 반환 (0, '', null, undefined, false)
 // ?? → 첫번째 정의된(defined: 0, '', false) 값을 반환
-
-// IE
