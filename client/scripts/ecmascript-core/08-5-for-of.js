@@ -2,41 +2,6 @@
 /* For Of Loop                                                            */
 /* ---------------------------------------------------------------------- */
 
-const languages = [
-  {
-    id: 'ecma-262',
-    name: 'JavaScript',
-    creator: 'Brendan Eich',
-    createAt: 1995,
-    standardName: 'ECMA-262',
-    currentVersion: 2022,
-  },
-  {
-    id: 'java',
-    name: 'Java',
-    creator: 'James Gosling',
-    createAt: 1995,
-    standardName: null,
-    currentVersion: 18,
-  },
-  {
-    id: 'ecma-334',
-    name: 'C#',
-    creator: 'Anders Hejlsberg',
-    createAt: 2000,
-    standardName: 'ECMA-334',
-    currentVersion: 8,
-  },
-];
-
-
-// for ~ of 문
-// - 특정 조건에서 건너띄기
-// - 특정 조건에서 중단하기
-
-
-
-
 const randomUser = {
   gender: 'female',
   name: { title: 'Ms', first: 'Carol', last: 'May' },
@@ -72,7 +37,64 @@ const randomUser = {
   nat: 'GB',
 };
 
+// for ~ in (object loop)
+// functional vs. object orieted (prototype)
+
+// for ~ of
+// Iterator Object
+// - string
+// - HTMLCollection Object
+// - NodeList Object
+// - arguments object
+
+
+const languages = [
+  {
+    id: 'ecma-262',
+    name: 'JavaScript',
+    creator: 'Brendan Eich',
+    createAt: 1995,
+    standardName: 'ECMA-262',
+    currentVersion: 2022,
+  },
+  {
+    id: 'java',
+    name: 'Java',
+    creator: 'James Gosling',
+    createAt: 1995,
+    standardName: null,
+    currentVersion: 18,
+  },
+  {
+    id: 'ecma-334',
+    name: 'C#',
+    creator: 'Anders Hejlsberg',
+    createAt: 2000,
+    standardName: 'ECMA-334',
+    currentVersion: 8,
+  },
+];
+
+
+// for ~ of 문
+// - 특정 조건에서 건너띄기
+// - 특정 조건에서 중단하기
+
+
+
+
+
+
 // 객체의 키, 값 순환
 // - for ~ in 문
 // - for ~ of 문
 // - 성능 비교 진단
+
+// object → iterable object
+
+// 구조 분해 할당 destructuring assignment
+
+// React Hooks (Tuple)
+for (const [key, value] of Object.entries(randomUser)) {
+  console.log(key, value);
+}
