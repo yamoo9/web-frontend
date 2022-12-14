@@ -1,4 +1,5 @@
 import { isNumber } from '../utils/typeIs.js';
+import { getStyle, setStyle } from '../utils/dom/css.js';
 
 /* -------------------------------------------------------------------------- */
 /* Type Conversion                                                            */
@@ -53,14 +54,26 @@ const map = { x: 101, y: -91 };
 // - 가져온 스타일 값의 타입을 변경하는 방법
 // - 문서 요소의 스타일을 업데이트 하는 방법
 
-function handleClickButton(event) {
-  // console.log('clicked button element');
-  console.log(event);
+function handleIncrement(e) {
+  let targetElement = paragraphElements[0];
+  let fontSizeValue = getStyle(targetElement, 'font-size');
+  fontSizeValue = fontSizeValue + amount;
+  setStyle(targetElement, 'font-size', fontSizeValue + 'px');
 }
+
+function handleDecrement(e) {
+  let targetElement = paragraphElements[0];
+  let fontSizeValue = getStyle(targetElement, 'font-size');
+  fontSizeValue = fontSizeValue - amount;
+  setStyle(targetElement, 'font-size', fontSizeValue + 'px');
+}
+
+let amount = 3;
 
 // 문서에서 대상 요소(객체) 찾기
 const demoElement = document.querySelector('.demo');
 const buttonElements = demoElement.querySelectorAll('button'); // [button, button]
+const paragraphElements = demoElement.querySelectorAll('p'); // [p, p]
 
 // console.log(demoElement);
 // console.log(buttonElements);
@@ -68,7 +81,25 @@ const buttonElements = demoElement.querySelectorAll('button'); // [button, butto
 // 문서 대상 요소에 이벤트 연결하기
 // elementNode.addEventListener(eventType, eventListener, eventOptions?);
 // buttonElements // NodeList
+
+// buttonElements[0]
 // buttonElements.item(0) // Button Element +
-buttonElements.item(0).addEventListener('click', handleClickButton);
+// buttonElements.item(0).addEventListener('click', handleClickButton);
+document
+  .querySelector('.incrementButton')
+  .addEventListener('click', handleIncrement);
+
 // buttonElements.item(1) // Button Element -
-buttonElements.item(1).addEventListener('click', handleClickButton);
+// buttonElements.item(1).addEventListener('click', handleClickButton);
+document
+  .querySelector('.decrementButton')
+  .addEventListener('click', handleDecrement);
+
+// 수집한 문서의 대상 집합(NodeList)을 순환(forEach 메서드) 이벤트 연결 처리
+// buttonElements.forEach(function (button) {
+//   button.addEventListener('click', handleClickButton);
+// });
+
+// 이벤트 위임(delegation)
+// 부모 요소에 이벤트 연결
+// 이벤트 전파(propagation)
