@@ -10,17 +10,17 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
-    "**/node_modules": true,
+    "**/node_modules": false,
     "**/*.js.map": {
       "when": "$(basename)"
     }
   },
   "files.associations": {
-    "*.js": "javascriptreact",
+    "*.jsx": "javascriptreact",
     ".browserslistrc": "bat",
     ".prettierrc": "json",
     ".htmlhintrc": "json",
-    ".npmrc": "dotenv"
+    ".npmrc": "bat"
   },
 
   "path-intellisense.extensionOnImport": true,

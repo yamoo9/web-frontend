@@ -7,9 +7,9 @@
 - [x] HTML 마크업
 - [x] CSS 스타일링
 - [x] 이미지 최적화
-- [ ] JavaScript 프로그래밍
-- [ ] DOM API / 이벤트 핸들링
-- [ ] 객체 지향, 함수 프로그래밍
+- [x] JavaScript 프로그래밍
+- [x] DOM API / 이벤트 핸들링
+- [x] 객체 지향, 함수 프로그래밍
 - [ ] 비동기 통신 / 처리
 - [ ] Node.js 런타임 환경
 - [ ] Express 프레임워크
