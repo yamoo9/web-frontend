@@ -13,7 +13,8 @@
     "compile:sass": "sass client/sass:client/css",
     "watch:sass": "npm run compile:sass -- --watch",
     "build:sass": "sass client/sass:client/build --style=compressed --no-source-map",
-    "compile:babel": "babel src/dom.js -o dist/dom.js"
+    "compile:babel": "babel src -d client/scripts/utils/dist",
+    "watch:babel": "npm run compile:babel -- --watch"
   },
   "author": {
     "name": "yamoo9",
@@ -28,5 +29,8 @@
     "imagemin-cli": "7.0.0",
     "live-server": "1.2.2",
     "sass": "1.56.2"
+  },
+  "dependencies": {
+    "core-js": "3.26.1"
   }
 }
