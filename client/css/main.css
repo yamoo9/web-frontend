@@ -78,12 +78,15 @@ h4 {
   margin-top: 24px;
   margin-bottom: 12px;
   font-weight: 500;
+  color: var(--accent--500);
 }
 
 p {
   margin-top: 0;
   margin-bottom: 8px;
+  font-size: 14px;
   font-weight: 200;
+  color: var(--gray--700);
 }
 
 [hidden] {
@@ -125,11 +128,14 @@ p {
 }
 
 .buttonGroup {
+  box-sizing: border-box;
+  overflow: hidden;
   display: inline-flex;
-  width: clamp(200px, 50vw, 340px);
+  width: clamp(160px, 50vw, 240px);
+  margin-bottom: 12px;
   border-radius: 50px;
-  background: #111;
-  color: #fff;
+  background: var(--accent--100);
+  color: var(--accent--900);
 }
 
 .buttonGroup button {
@@ -140,10 +146,28 @@ p {
   font-weight: 700;
   background: transparent;
   color: inherit;
+  border-radius: 0 50px 50px 0;
+}
+
+.buttonGroup button:hover {
+  background: var(--accent--900);
+  color: var(--accent--100);
+}
+
+.buttonGroup button:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--accent--900);
 }
 
 .buttonGroup button:first-child {
-  border-right: 1px solid currentColor;
+  border-right: 1px solid var(--gray--100);
+  border-radius: 50px 0 0 50px;
+}
+
+.container {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .box {

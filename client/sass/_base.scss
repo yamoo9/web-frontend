@@ -11,13 +11,15 @@ h4 {
   margin-top: 24px;
   margin-bottom: 12px;
   font-weight: 500;
+  color: var(--accent--500);
 }
 
 p {
   margin-top: 0;
   margin-bottom: 8px;
-  // font-size: 14px;
+  font-size: 14px;
   font-weight: 200;
+  color: var(--gray--700);
 }
 
 [hidden] {

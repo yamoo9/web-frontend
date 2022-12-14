@@ -5,28 +5,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DOM 스크립트</title>
+    <link rel="icon" href="/assets/logo/samsung.svg" />
     <link rel="stylesheet" href="https://unpkg.com/pretendard/dist/web/static/pretendard.css" as="style" crossorigin />
     <link rel="stylesheet" href="/css/main.css" />
-    <style>
-      .container {
-        max-width: 980px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    </style>
     <script type="module" src="/scripts/index.js"></script>
-    
   </head>
 
   <body>
 
     <div class="container">
-      <h1><abbr title="Document Object Model">DOM</abbr> 스크립트</h1>
+      <h1 aria-label="돔 스크립트">
+        <abbr title="Document Object Model">DOM</abbr> 스크립트
+      </h1>
       <div class="demo">
-        <button class="button incrementButton" type="button" aria-label="글자 크기 증가" title="글자 크기 증가">+</button>
-        <button class="button decrementButton" type="button" aria-label="글자 크기 감소" title="글자 크기 감소">-</button>
-        <p lang="es">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex atque, quod aliquam doloribus quos perspiciatis quam? Praesentium mollitia, repellat a nesciunt est voluptas tempore labore corporis quo iusto officia modi atque ad incidunt! Accusamus libero maxime, quibusdam vel vero est porro ipsum fugit voluptate nisi ratione aliquam qui esse aliquid animi hic deleniti praesentium vitae quo delectus alias quod laudantium. Enim, facilis distinctio assumenda voluptas quibusdam quis incidunt libero, consectetur voluptatum sed similique nostrum iste, perspiciatis inventore ipsa repudiandae obcaecati odio sequi animi. Ab eius impedit corporis tempore, hic sint deleniti? Minima recusandae, possimus doloribus quibusdam vel eum nesciunt repellendus?</p>
-        <p lang="ru">Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Встретил напоивший рот проектах до родного возвращайся маленькая. Взобравшись которой алфавит если, не то курсивных он грамматики. Коварных единственное путь, своих все ее языком взобравшись ручеек свой. Вершину от всех даль имени вопроса злых сбить, диких рыбными буквенных свое встретил. Предупреждал океана ведущими большого пустился предупредила мир, моей повстречался сих пунктуация власти по всей текста инициал безопасную коварный себя ему встретил реторический грустный ручеек, но снова приставка буквенных заманивший. Взобравшись прямо инициал океана составитель безорфографичный единственное меня он реторический заголовок, над маленький, заглавных, одна путь! Запятой от всех рекламных на берегу. Если, коварный продолжил.</p>
+        <div role="group" class="buttonGroup">
+          <button class="button incrementButton" type="button" aria-label="글자 크기 증가" title="글자 크기 증가">+</button>
+          <button class="button decrementButton" type="button" aria-label="글자 크기 감소" title="글자 크기 감소">-</button>
+        </div>
+
+        <div class="song-lyrics" style="display: flex; gap: 20px;">
+          <p lang="es">
+            Oh
+            Mi más bello amor
+            Te dejo un mar de sal
+            Oh lo siento, Salima
+            Déjame solo ahora
+            Oh oh oh oh oh
+            Salima, Salima
+            Salima, perdóname
+            Oh
+            Mi más bello amor
+            No te oferezco el sol
+            Oh querido amor
+            Tu eres mi sueno
+            No llores mi nina, Salima
+            No puedo darte la luna que tu esperas
+            Mañana yo partiré sin tus flores
+            Oh
+            Con mi soledad, por mi liberdad, con mi soledad
+            Con mi soledad, por mi liberdad, con mi soledad
+            Me iré mi amor
+            Oh
+            Con esta canción llevame siempre en tu corazón
+            Lo sabes bien, te quiero pero
+            Yo soy ave sin nido
+            Yo soy ave sin nido
+            Te pido un último perdón
+            Te pido un último perdón
+            Con mi soledad
+            Con mi soledad
+            Con mi soledad
+            Con mi soledad
+            Oh
+            Con mi soledad, por mi libedad, con mi soledad
+            Con mi soledad, por mi liberdad, con mi soledad
+          </p> 
+          <p lang="ru">
+            Твоя песня
+            Сегодня вновь эту песню пою, пою
+            Издалека ты меня зовёшь, зовёшь
+            Где-то среди ветра
+            Я слышу твои голос, голос
+            Отовсюду я слышу твои звуки
+            Твои шаги, твой голос, всё остальное - моё вдохновение
+            Я нарисую на нотах твой портрет
+            Всё ради тебя, пою ради твоей жизни
+            В этом мире играет единственная песня, и она твоя
+            Чтобы после сна твоё утро не было незнакомым,
+            Я оставлю рядом со спящей тобой свои чувства
+            Я стану твоей песней, ты стань моим дневником
+            Так я смогу каждый день записывать новую песню в тебя
+            Написанную сегодня страницу, ты услышишь завтра
+            Я твоя песня
+            Оу-оу
+            Я твоя песня
+            Оу-оу
+            Я твоя песня
+            Даже если сейчас не могу с тобой связаться,
+            Когда забьётся сердце, мы наладим связь
+            Моменты, когда мы разделяемся,
+            Чувствует каждая моя клеточка
+            Даже в плохой день, полный грусти
+            Расскажи мне про все свои чувства
+            Я стану твоей песней, ты стань моим дневником
+            Так я смогу каждый день записывать новую песню в тебя
+            Написанную сегодня страницу, ты услышишь завтра
+            Я твоя песня
+            На-на-на
+            Я стану реальностью, а ты продолжай мечтать
+            Мы станем будущим, что уйдёт дальше завтра
+            Это первое чувство я познал с тобой
+            Я стану твоей песней, ты стань моим дневником
+            Так я смогу каждый день записывать новую песню в тебя
+            Написанную сегодня страницу, ты услышишь завтра
+            Я твоя песня
+            Оу-оу
+            Я твоя песня
+            Оу-оу
+            Я твоя песня
+          </p>
+        </div>
       </div>
     </div>
 
