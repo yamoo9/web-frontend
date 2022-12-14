@@ -17,4 +17,8 @@
 // import './ecmascript-core/04-data-types.js';
 
 // DOM 스크립트
-import './ecmascript-core/05-type-conversion.js';
+// import './ecmascript-core/05-type-conversion.js';
+
+// ES 연산자
+// import './ecmascript-core/06-1-operations.js';
+import './ecmascript-core/06-2-comparison-operator.js';

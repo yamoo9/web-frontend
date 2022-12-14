@@ -2,22 +2,21 @@
 /* Comparison Operator                                                    */
 /* ---------------------------------------------------------------------- */
 
-
-// ~ 보다 큼 또는 작음 → boolean
+// ~ 보다 큼(x > y) 또는 작음(x < y) → boolean 
 let lessThen;
 let greaterThen;
 
-// ~ 보다 크거나 작음 또는 같음 → boolean
+// ~ 보다 크거나 작음(x >= y) 또는 작거나 같음(x <= y) → boolean
 let lessThenAndEqual;
 let greaterThenAndEqual;
 
-// 동등(등급이나 정도가 같다) → boolean
+// 동등(등급이나 정도가 같다, x == y) → boolean
 let equal;
 
-// 다름(같지 않음) → boolean
+// 다름(같지 않음, x != y) → boolean
 let inequal;
 
-// 동일(똑같다) → boolean
+// 동일(똑같다, x === y | x !== y) → boolean
 let same;
 
 
