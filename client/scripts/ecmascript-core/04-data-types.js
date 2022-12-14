@@ -1,4 +1,4 @@
-import typeIs from '../utils/typeIs.js';
+import { typeIs } from '../utils/typeIs.js';
 
 /* ---------------------------------------------------------------------- */
 /* Data Types                                                             */
