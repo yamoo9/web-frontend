@@ -17,8 +17,13 @@
 // import './ecmascript-core/04-data-types.js';
 
 // DOM 스크립트
-// import './ecmascript-core/05-type-conversion.js';
+import './ecmascript-core/05-type-conversion.js';
 
-// ES 연산자
+// ES 연산자, 비교 연산
 // import './ecmascript-core/06-1-operations.js';
-import './ecmascript-core/06-2-comparison-operator.js';
+// import './ecmascript-core/06-2-comparison-operator.js';
+
+// 조건 처리
+// import './ecmascript-core/07-1-if-else.js';
+// import './ecmascript-core/07-2-logical-operators.js';
+import './ecmascript-core/07-3-switch.js';

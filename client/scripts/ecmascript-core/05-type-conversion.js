@@ -1,5 +1,5 @@
 import { isNumber } from '../utils/typeIs.js';
-import { getStyle, setStyle } from '../utils/dom/css.js';
+import css from '../utils/dom/css.js';
 
 /* -------------------------------------------------------------------------- */
 /* Type Conversion                                                            */
@@ -60,9 +60,9 @@ function handleIncrement(e) {
   // fontSizeValue = fontSizeValue + amount;
   // setStyle(targetElement, 'font-size', fontSizeValue + 'px');
   paragraphElements.forEach(function (paragraphElement) {
-    let fontSizeValue = getStyle(paragraphElement, 'font-size');
+    let fontSizeValue = css(paragraphElement, 'font-size');
     fontSizeValue = fontSizeValue + amount;
-    setStyle(paragraphElement, 'font-size', fontSizeValue + 'px');
+    css(paragraphElement, 'font-size', fontSizeValue + 'px');
   });
 }
 
@@ -72,9 +72,9 @@ function handleDecrement(e) {
   // fontSizeValue = fontSizeValue - amount;
   // setStyle(targetElement, 'font-size', fontSizeValue + 'px');
   paragraphElements.forEach(function (paragraphElement) {
-    let fontSizeValue = getStyle(paragraphElement, 'font-size');
+    let fontSizeValue = css(paragraphElement, 'font-size');
     fontSizeValue = fontSizeValue - amount;
-    setStyle(paragraphElement, 'font-size', fontSizeValue + 'px');
+    css(paragraphElement, 'font-size', fontSizeValue + 'px');
   });
 }
 
