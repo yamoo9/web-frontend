@@ -48,24 +48,34 @@ const map = { x: 101, y: -91 };
 /* 문서객체모델(DOM) API + JavaScript 접근/조작                                     */
 /* -------------------------------------------------------------------------- */
 
-// - 문서의 요소에 접근하는 방법
-// - 문서 요소에 이벤트 리스너를 연결하는 방법
-// - 문서 요소로부터 스타일 값을 가져오는 방법
-// - 가져온 스타일 값의 타입을 변경하는 방법
-// - 문서 요소의 스타일을 업데이트 하는 방법
+// - 문서의 요소에 접근하는 방법 .getElementById(), .querySelectorAll(), .querySelector()
+// - 문서 요소에 이벤트 리스너를 연결하는 방법 .addEventListener(), .removeEventListener()
+// - 문서 요소로부터 스타일 값을 가져오는 방법 getComputedStyle()
+// - 가져온 스타일 값의 타입을 변경하는 방법 type conversion (string → number), parseInt()
+// - 문서 요소의 스타일을 업데이트 하는 방법 type conversion (number → string)
 
 function handleIncrement(e) {
-  let targetElement = paragraphElements[0];
-  let fontSizeValue = getStyle(targetElement, 'font-size');
-  fontSizeValue = fontSizeValue + amount;
-  setStyle(targetElement, 'font-size', fontSizeValue + 'px');
+  // let targetElement = paragraphElements[0];
+  // let fontSizeValue = getStyle(targetElement, 'font-size');
+  // fontSizeValue = fontSizeValue + amount;
+  // setStyle(targetElement, 'font-size', fontSizeValue + 'px');
+  paragraphElements.forEach(function (paragraphElement) {
+    let fontSizeValue = getStyle(paragraphElement, 'font-size');
+    fontSizeValue = fontSizeValue + amount;
+    setStyle(paragraphElement, 'font-size', fontSizeValue + 'px');
+  });
 }
 
 function handleDecrement(e) {
-  let targetElement = paragraphElements[0];
-  let fontSizeValue = getStyle(targetElement, 'font-size');
-  fontSizeValue = fontSizeValue - amount;
-  setStyle(targetElement, 'font-size', fontSizeValue + 'px');
+  // let targetElement = paragraphElements[0];
+  // let fontSizeValue = getStyle(targetElement, 'font-size');
+  // fontSizeValue = fontSizeValue - amount;
+  // setStyle(targetElement, 'font-size', fontSizeValue + 'px');
+  paragraphElements.forEach(function (paragraphElement) {
+    let fontSizeValue = getStyle(paragraphElement, 'font-size');
+    fontSizeValue = fontSizeValue - amount;
+    setStyle(paragraphElement, 'font-size', fontSizeValue + 'px');
+  });
 }
 
 let amount = 3;

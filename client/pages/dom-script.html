@@ -17,10 +17,41 @@
       <h1 aria-label="돔 스크립트">
         <abbr title="Document Object Model">DOM</abbr> 스크립트
       </h1>
+      <nav>
+        <h2 class="a11yHidden">페이지 탐색 리스트</h2>
+        <ul>
+          <li>
+            <a href="/">홈</a>
+          </li>
+          <li>
+            <a href="/pages/introduction.html">소개</a>
+          </li>
+          <li>
+            <a href="/pages/table-form-design.html">표 디자인</a>
+          </li>
+          <li>
+            <a>DOM 스크립트</a>
+          </li>
+        </ul>
+      </nav>
       <div class="demo">
         <div role="group" class="buttonGroup">
-          <button class="button incrementButton" type="button" aria-label="글자 크기 증가" title="글자 크기 증가">+</button>
-          <button class="button decrementButton" type="button" aria-label="글자 크기 감소" title="글자 크기 감소">-</button>
+          <button 
+            type="button" 
+            class="button incrementButton" 
+            aria-label="글자 크기 증가" 
+            title="글자 크기 증가"
+          >
+            +
+          </button>
+          <button 
+            type="button" 
+            class="button decrementButton" 
+            aria-label="글자 크기 감소" 
+            title="글자 크기 감소"
+          >
+            -
+          </button>
         </div>
 
         <div class="song-lyrics" style="display: flex; gap: 20px;">
