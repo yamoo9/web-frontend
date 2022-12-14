@@ -13,4 +13,8 @@
 // 엄격 모드 활성화(모듈의 경우 기본 활성)
 // import './ecmascript-core/03-strict-mode.js';
 
-import './ecmascript-core/04-data-types.js';
+// ECMAScript 데이터 타입
+// import './ecmascript-core/04-data-types.js';
+
+// DOM 스크립트
+import './ecmascript-core/05-type-conversion.js';
