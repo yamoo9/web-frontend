@@ -1,7 +1,7 @@
 module.exports = {
   comments: false,
   minified: true,
-  ignore: ['./src/ecmascript-core'],
+  ignore: ['./src/ecmascript-core', './src/ecmascript-next'],
   presets: [
     [
       '@babel/preset-env',
