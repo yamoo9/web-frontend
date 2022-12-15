@@ -1,7 +1,11 @@
-export const styled = (styleRules, targetElement) => {
+export const styled = (
+  styleRules /* ['....', '....'] */,
+  targetElement /* app */
+) => {
+  // [ 'color: red;', 'background: gray;' ]
   targetElement.style.cssText = styleRules.reduce(
     (cssCode, ruleCode) => cssCode + ruleCode,
-    ''
+    '' // 초기 값
   );
   return targetElement;
 };
@@ -21,3 +25,6 @@ export const $styled = (targetElement) => (styleRules) =>
     (cssCode, currentRule) => cssCode + currentRule.trim(),
     ''
   ));
+
+// [Vanilla] HTML | JavaScript | CSS (Component X)
+// [Framework] React (JSX = JavaScript + XML) + (CSS | JSS(CSS in JS)) (Component)
