@@ -10,12 +10,7 @@ const PORT = INITIAL_PORT ?? 4000;
 const PUBLIC_DIR = resolve(__dirname, '../client/public');
 
 app.use(express.static(PUBLIC_DIR));
-
-// 비동기 요청(client) ← → 비동기 응답(server)
-// CALLBACK, PROMISE, ASYNC FUNCTION
-
-// MongoDB
-// Mogoose Schema
+app.use(express.json());
 
 const users = [
   {
@@ -40,7 +35,8 @@ const users = [
 
 // RESTful API
 
-// GET
+// GET (READ)
+
 app.get(`${API_URL}/users`, (req, res) => {
   res.send(users);
 });
@@ -57,9 +53,22 @@ app.get(`${API_URL}/users/:userId`, (req, res) => {
   }
 });
 
-// POST
+// POST (CREATE)
+app.post(`${API_URL}/users`, (req, res) => {
+  const { name, job, isAdmin } = req.body;
 
-// PUT
+  const newUser = {
+    id: String(users.length + 1),
+    isAdmin: isAdmin ?? false,
+    name,
+    job,
+  };
+
+  users.push(newUser);
+  res.send(newUser);
+});
+
+// PUT (UPDATE)
 
 // DELETE
 
