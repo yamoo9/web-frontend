@@ -1,7 +1,11 @@
+require('dotenv/config');
+
+const { API_URL, PORT: INITIAL_PORT } = process.env;
+
 const { resolve } = require('node:path');
 const express = require('express');
 const app = express();
-const PORT = 4000;
+const PORT = INITIAL_PORT ?? 4000;
 
 const PUBLIC_DIR = resolve(__dirname, '../client/public');
 
@@ -37,11 +41,11 @@ const users = [
 // RESTful API
 
 // GET
-app.get('/api/v1/users', (req, res) => {
+app.get(`${API_URL}/users`, (req, res) => {
   res.send(users);
 });
 
-app.get('/api/v1/users/:userId', (req, res) => {
+app.get(`${API_URL}/users/:userId`, (req, res) => {
   let { userId } = req.params;
 
   const foundUser = users.find((user) => user.id === userId);
