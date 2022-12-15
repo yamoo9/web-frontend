@@ -3,8 +3,8 @@ const userList = app?.querySelector('.users');
 const requestButton = app?.querySelector('.button--call-api');
 
 const handleRequestUsers = () => {
-  // fetchUsers();
-  fetchUser(3);
+  fetchUsers();
+  // fetchUser(3);
 };
 
 // eslint-disable-next-line no-unused-vars
@@ -15,6 +15,7 @@ const fetchUsers = () => {
     .catch((error) => console.error(error.message));
 };
 
+// eslint-disable-next-line no-unused-vars
 const fetchUser = (id) => {
   fetch(`/api/v1/users/${id}`)
     .then((response) => response.json())
@@ -29,7 +30,11 @@ const renderUserList = (users) => {
       `
     <li class="user" data-user-id="${id}">
       <ul>
-        <li><strong>${name}</strong></li>
+        <li>
+          <a href="/users/${id}">
+            <strong>${name}</strong>
+          </a>
+        </li>
         <li><span>${job}</span> | <span>관리자 권한 여부: ${isAdmin.toString()}</span></li>
       </ul>
     </li>

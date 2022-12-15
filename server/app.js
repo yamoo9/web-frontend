@@ -4,13 +4,17 @@ const { API_URL, PORT: INITIAL_PORT } = process.env;
 
 const { resolve } = require('node:path');
 const express = require('express');
+const morgan = require('morgan');
 const app = express();
+
 const PORT = INITIAL_PORT ?? 4000;
 
 const PUBLIC_DIR = resolve(__dirname, '../client/public');
 
 app.use(express.static(PUBLIC_DIR));
+app.use(express.urlencoded());
 app.use(express.json());
+app.use(morgan('tiny'));
 
 const users = [
   {
@@ -35,6 +39,23 @@ const users = [
 
 // RESTful API
 
+// POST (CREATE)
+app.post(`${API_URL}/users`, (req, res) => {
+  const { name, job, isAdmin } = req.body;
+
+  console.log(name, job);
+
+  const newUser = {
+    id: String(users.length + 1),
+    isAdmin: isAdmin ?? false,
+    name,
+    job,
+  };
+
+  users.push(newUser);
+  res.send(newUser);
+});
+
 // GET (READ)
 
 app.get(`${API_URL}/users`, (req, res) => {
@@ -53,22 +74,8 @@ app.get(`${API_URL}/users/:userId`, (req, res) => {
   }
 });
 
-// POST (CREATE)
-app.post(`${API_URL}/users`, (req, res) => {
-  const { name, job, isAdmin } = req.body;
-
-  const newUser = {
-    id: String(users.length + 1),
-    isAdmin: isAdmin ?? false,
-    name,
-    job,
-  };
-
-  users.push(newUser);
-  res.send(newUser);
-});
-
 // PUT (UPDATE)
+app.put(`${API_URL}/users/:userId`, (req, res) => {});
 
 // DELETE
 
