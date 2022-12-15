@@ -20,7 +20,7 @@
     }
   },
   "scripts": {
-    "start": "run-p serve watch",
+    "start": "run-p serve compile",
     "dev": "run-p serve:dev watch",
     "serve": "live-server public --host=localhost --port=3000",
     "serve:dev": "npm run serve -- --no-browser",
