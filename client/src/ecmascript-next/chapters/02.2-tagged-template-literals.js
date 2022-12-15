@@ -11,17 +11,41 @@ const virtualNode = {
   style: { cssText: '' },
 };
 
-const styled = () => {
+const styled = (styleRules, targetElement) => {
   // 코드 로직을 작성합니다.
+  // 리듀서 함수 = 순수 함수 (함수형 프로그래밍 : 인풋/아웃풋이 동일한 타입, 사이드이펙트 X)
+  targetElement.style.cssText = styleRules.reduce(
+    (cssCode, ruleCode) => cssCode + ruleCode,
+    ''
+  );
+  return targetElement;
 };
 
 const $styled = () => {
   // 코드 로직을 작성합니다.
 };
 
+/* PRACTICE ----------------------------------------------------------------- */
+
+let values = {
+  margin: '10px',
+  color: '#d08471',
+};
+
+let result = styled(['margin:10px;', `color:${values.color};`], virtualNode);
+
+console.log('A: ', result.style.cssText);
+
+result = styled`
+  ${virtualNode}
+  margin: 10px;
+  color: #d08471;
+`;
+
+console.log('B: ', result.style.cssText);
 
 // ------------------------------------------------------------------------------
-// TEST                                                                      
+// TEST
 // ------------------------------------------------------------------------------
 // - [ ] Jest 테스트 러너를 구동한 후, 테스트가 성공하도록 함수 로직을 구성합니다.
 // ------------------------------------------------------------------------------
