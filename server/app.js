@@ -10,18 +10,27 @@ app.use(express.static(PUBLIC_DIR));
 // 비동기 요청(client) ← → 비동기 응답(server)
 // CALLBACK, PROMISE, ASYNC FUNCTION
 
+// MongoDB
+// Mogoose Schema
+
 const users = [
   {
-    id: 1,
+    id: '1', // Number
     name: '야무',
     job: '강사',
     isAdmin: false,
   },
   {
-    id: 2,
+    id: '2',
     name: '슬비',
     job: '강사',
     isAdmin: true,
+  },
+  {
+    id: '3',
+    name: '선범',
+    job: '강사',
+    isAdmin: false,
   },
 ];
 
@@ -32,8 +41,22 @@ app.get('/api/v1/users', (req, res) => {
   res.send(users);
 });
 
+app.get('/api/v1/users/:userId', (req, res) => {
+  let { userId } = req.params;
+
+  const foundUser = users.find((user) => user.id === userId);
+
+  if (!foundUser) {
+    res.status(404).send({ message: '사용자가 없습니다.' });
+  } else {
+    res.status(200).send(foundUser);
+  }
+});
+
 // POST
+
 // PUT
+
 // DELETE
 
 app.listen(PORT, () => {

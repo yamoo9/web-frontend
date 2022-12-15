@@ -3,13 +3,22 @@ const userList = app?.querySelector('.users');
 const requestButton = app?.querySelector('.button--call-api');
 
 const handleRequestUsers = () => {
-  fetchUsers();
+  // fetchUsers();
+  fetchUser(3);
 };
 
+// eslint-disable-next-line no-unused-vars
 const fetchUsers = () => {
   fetch('/api/v1/users')
     .then((response) => response.json())
     .then((users) => renderUserList(users))
+    .catch((error) => console.error(error.message));
+};
+
+const fetchUser = (id) => {
+  fetch(`/api/v1/users/${id}`)
+    .then((response) => response.json())
+    .then((user) => renderUser(user))
     .catch((error) => console.error(error.message));
 };
 
@@ -28,6 +37,10 @@ const renderUserList = (users) => {
     ''
   );
   userList?.insertAdjacentHTML('afterbegin', userListHtmlString);
+};
+
+const renderUser = (user) => {
+  renderUserList([user]);
 };
 
 requestButton?.addEventListener('click', handleRequestUsers);
