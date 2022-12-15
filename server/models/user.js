@@ -1,6 +1,6 @@
 const users = [
   {
-    id: '1', // Number
+    id: '1',
     name: '야무',
     job: '강사',
     isAdmin: false,
