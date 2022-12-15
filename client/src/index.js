@@ -1,37 +1,33 @@
-function delay(timeout = 1000 /* 1000ms === 1s */, shouldReject = false) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (!shouldReject) {
-        resolve({ message: '지연 처리에 성공했습니다. 😃' });
-      } else {
-        reject({ message: '처리 시간이 지연되어 종료됩니다. 🥹' });
-      }
-    }, timeout);
-  });
-}
+const app = document.getElementById('app');
+const userList = app?.querySelector('.users');
+const requestButton = app?.querySelector('.button--call-api');
 
-delay(2000, true)
-  .then((response) => {
-    console.log('2s: ', response.message);
-    return `✅ ${response.message}`;
-  })
-  .then((response) => {
-    console.log(response);
-  })
-  .catch((error) => {
-    console.error('2s: ', error.message);
-  })
-  .finally(() => {
-    console.info('2s 요청이 종료되었습니다.');
-  });
+const handleRequestUsers = () => {
+  fetchUsers();
+};
 
-delay(4000, true)
-  .then((response) => {
-    console.log('4s: ', response.message);
-  })
-  .catch((error) => {
-    console.error('4s: ', error.message);
-  })
-  .finally(() => {
-    console.info('4s 요청이 종료되었습니다.');
-  });
+const fetchUsers = () => {
+  fetch('/api/v1/users')
+    .then((response) => response.json())
+    .then((users) => renderUserList(users))
+    .catch((error) => console.error(error.message));
+};
+
+const renderUserList = (users) => {
+  const userListHtmlString = users.reduce(
+    (htmlString, { id, name, job, isAdmin }) =>
+      htmlString +
+      `
+    <li class="user" data-user-id="${id}">
+      <ul>
+        <li><strong>${name}</strong></li>
+        <li><span>${job}</span> | <span>관리자 권한 여부: ${isAdmin.toString()}</span></li>
+      </ul>
+    </li>
+  `.trim(),
+    ''
+  );
+  userList?.insertAdjacentHTML('afterbegin', userListHtmlString);
+};
+
+requestButton?.addEventListener('click', handleRequestUsers);

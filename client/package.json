@@ -46,6 +46,7 @@
     "@babel/core": "7.20.5",
     "@babel/preset-env": "7.20.2",
     "cross-var": "1.1.0",
+    "eslint": "8.29.0",
     "htmlhint": "1.1.4",
     "imagemin-cli": "7.0.0",
     "live-server": "1.2.2",
