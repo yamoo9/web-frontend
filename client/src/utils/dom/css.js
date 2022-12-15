@@ -27,21 +27,6 @@ function setStyle(elementNode, propName, value) {
  * @returns any
  */
 export default function css(elementNode, propName, value) {
-  /* 문(statement) ------------------------------------------------------------- */
-
-  // 설정할 값이 있나?
-  // if (!value) {
-  //   // 없다 (GET)
-  //   return getStyle(elementNode, propName);
-  // } else {
-  //   // 있다 (SET)
-  //   setStyle(elementNode, propName, value);
-  // }
-
-  // return undefined;
-
-  /* 식(expression) ------------------------------------------------------------ */
-
   return !value
     ? getStyle(elementNode, propName)
     : setStyle(elementNode, propName, value);
