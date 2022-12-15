@@ -1,9 +1,6 @@
 const { React, ReactDOM } = globalThis;
 
-// React Element
-// type="button" class="button button--call-api"
-
-// 컴포넌트 - 리액트 요소 재사용
+// React 컴포넌트(Component) - 요소(Element) 생성 → 재사용
 
 const RequestButton = () =>
   React.createElement(
@@ -12,7 +9,7 @@ const RequestButton = () =>
       type: 'button',
       className: 'button',
       onClick() {
-        // console.log('clicked react element button');
+        console.log('React 요소 클릭');
       },
     },
     '사용자 ',
@@ -20,7 +17,6 @@ const RequestButton = () =>
     '요청'
   );
 
-// <ul class="users"></ul>
 const UserList = () =>
   React.createElement('ul', {
     className: 'users',
@@ -34,10 +30,6 @@ const App = () =>
     React.createElement(UserList)
   );
 
-// console.log(requestButton);
-// console.log(userList);
-
-// ReactDOMRoot Object
 const container = document.getElementById('root');
 const reactDomRoot = ReactDOM.createRoot(container);
 reactDomRoot.render(React.createElement(App));
