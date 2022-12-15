@@ -10,9 +10,9 @@
 - [x] JavaScript 프로그래밍
 - [x] DOM API / 이벤트 핸들링
 - [x] 객체 지향, 함수 프로그래밍
-- [ ] 비동기 통신 / 처리
-- [ ] Node.js 런타임 환경
-- [ ] Express 프레임워크
+- [x] 비동기 통신 / 처리
+- [x] Node.js 런타임 환경
+- [x] Express 프레임워크
 - [ ] Front-end 개발 환경
 - [ ] React UI 라이브러리
 - [ ] Next.js 프레임워크
