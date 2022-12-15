@@ -38,6 +38,10 @@
     "email": "yamoo9@euid.dev",
     "url": "https://euid.dev"
   },
+  "engines": {
+    "node": "^16.0.0",
+    "vscode": "^1.22.0"
+  },
   "dependencies": {
     "core-js": "3.26.1"
   },
