@@ -8,7 +8,11 @@
 // 배열 전개 ---------------------------------------------------------------------
 
 var integers = [-1, 0, 32, -101, 24];
-var maxInt = Math.max.apply(Math, [302, 1, 2, 30, -101].concat(integers));
+// var maxInt = Math.max.apply(Math, [302, 1, 2, 30, -101].concat(integers));
+
+let maxInt = Math.max(...[302, 1, ...integers, 2, 30, -101]);
+
+console.log({ maxInt });
 
 // 객체 전개 ---------------------------------------------------------------------
 
@@ -48,18 +52,24 @@ var state = {
   data: [{ id: 101, title: '초기 데이터' }],
 };
 
+Object.freeze(state);
+
 // 상태 업데이트 유틸리티 함수
-var setState = function(type) {
-  let newState = type;
-  if (typeof newState === 'function') {
-    newState = type(state);
-  }
-  return extend({}, state, newState);
+var setState = function (newState) {
+  // let newState = type;
+  // if (typeof newState === 'function') {
+  //   newState = newState(state);
+  // }
+  // return extend({}, state, newState);
+  return { ...state, ...newState };
 };
 
+const newState = setState((prevState) => ({
+  data: [...prevState.data, { id: 201, title: '추가 데이터' }],
+}));
 
 // ------------------------------------------------------------------------------
-// TEST                                                                      
+// TEST
 // ------------------------------------------------------------------------------
 // - [ ] Jest 테스트 러너를 구동한 후, 테스트가 성공하도록 함수 로직을 구성합니다.
 // ------------------------------------------------------------------------------

@@ -4,7 +4,7 @@
 // - [ ] 구조 분해 할당(Destructuring assignment)을 활용해 구문을 수정합니다.
 // -----------------------------------------------------------------------------
 
-var state = Object.freeze({
+const state = Object.freeze({
   loading: false,
   error: null,
   data: [
@@ -15,17 +15,22 @@ var state = Object.freeze({
 });
 
 // 객체 속성과 일치하는 변수 선언 후, 속성 값 할당
-var loading = state.loading;
-var error = state.error;
-var data = state.data;
+const { error, loading, data } = state;
+
+// const loading = state.loading;
+// const error = state.error;
+// const data = state.data;
 
 // 배열의 첫번째 아이템, 나머지 집합 추출
-var firstData = data[0];
-var restData = data.slice(1);
+// var firstData = data[0];
+// var restData = data.slice(1);
 
+const [firstData, ...restData] = data;
+
+console.log(restData); // [ { ... }, {...} ]
 
 // ------------------------------------------------------------------------------
-// TEST                                                                      
+// TEST
 // ------------------------------------------------------------------------------
 // - [ ] Jest 테스트 러너를 구동한 후, 테스트가 성공하도록 함수 로직을 구성합니다.
 // ------------------------------------------------------------------------------

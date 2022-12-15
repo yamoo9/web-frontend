@@ -12,19 +12,23 @@ const defaultArg = (value, initialValue) => {
   return value;
 };
 
-const truncateText = (text, limit) => {
-  limit = defaultArg(limit, 100);
+// function getDefault() {
+//   return 100;
+// }
+
+const truncateText = (text, limit = 100) => {
+  // limit = defaultArg(limit, 100);
   return '...';
 };
 
 // ------------------------------------------------------------------------------
-// TEST                                                                      
+// TEST
 // ------------------------------------------------------------------------------
 // - [ ] Jest 테스트 러너를 구동한 후, 테스트가 성공하도록 함수 로직을 구성합니다.
 // ------------------------------------------------------------------------------
 
 // const desc = `
-//   기본 매개변수(Default Paramters)는 함수 매개변수의 
+//   기본 매개변수(Default Paramters)는 함수 매개변수의
 //   기본 값을 선언적으로 표현하는 강력한 방법입니다.
 // `.trim();
 
