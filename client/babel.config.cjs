@@ -11,5 +11,6 @@ module.exports = {
         // corejs: '3.8',
       },
     ],
+    ["@babel/preset-react", {}]
   ],
 };
