@@ -1,1 +1,1 @@
-// import './demo/using-react-with-jsx.js';
+import './demo/using-react-with-jsx.js';

@@ -13,41 +13,14 @@
     <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
-    <script type="module" src="scripts/index.js"></script>
+    <!-- <script type="module" src="scripts/index.js"></script> -->
+    <script type="text/jsx" data-type="module" src="scripts/demo/render-react-app.js"></script>
 
   </head>
 
   <body>
 
     <div id="root"></div>
-
-    <script type="text/babel">
-
-      function App() {
-        return (
-          <div id="app">
-            <RequestButton>사용자 정보 요청</RequestButton>
-            <UserList />
-          </div>
-        );
-      }
-
-      function RequestButton(props) {
-        return (
-          <button type="button" className="button button--call-api">
-            {props.children}
-          </button>
-        );
-      }
-
-      function UserList(props) {
-        return <ul className="users" {...props} />;
-      }
-
-      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-
-
-    </script>
 
     <div hidden id="app">
       <button type="button" class="button button--call-api">사용자 정보 요청</button>
