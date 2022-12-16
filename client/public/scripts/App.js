@@ -24,6 +24,7 @@ var App = function (_React$Component) {
     }
     _this = _super.call.apply(_super, [this].concat(args));
     _defineProperty(_assertThisInitialized(_this), "state", {
+      isRenderUserList: true,
       email: {
         id: 'user-email',
         label: '이메일',
@@ -40,16 +41,27 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
       return React.createElement("div", {
         style: {
           maxWidth: 1140,
           margin: '80px auto'
         }
-      }, React.createElement(RequestButton, null, "\uC0AC\uC6A9\uC790 \uC815\uBCF4 \uC694\uCCAD"), React.createElement("div", {
+      }, React.createElement(RequestButton, null, "\uC0AC\uC6A9\uC790 \uC815\uBCF4 \uC694\uCCAD"), React.createElement("button", {
+        type: "button",
+        onClick: function onClick() {
+          _this2.setState(function (_ref) {
+            var isRenderUserList = _ref.isRenderUserList;
+            return {
+              isRenderUserList: !isRenderUserList
+            };
+          });
+        }
+      }, "UserList \uB80C\uB354\uB9C1 \uC5EC\uBD80: ", this.state.isRenderUserList ? 'OK' : 'NO'), React.createElement("div", {
         style: {
           width: 420
         }
-      }, React.createElement(UserList, {
+      }, this.state.isRenderUserList && React.createElement(UserList, {
         "aria-label": "\uC0AC\uC6A9\uC790 \uBAA9\uB85D"
       })));
     }

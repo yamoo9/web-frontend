@@ -4,6 +4,7 @@ import { FormControl, RequestButton, UserList } from './components/index.js';
 
 export default class App extends React.Component {
   state = {
+    isRenderUserList: true,
     email: {
       id: 'user-email',
       label: '이메일',
@@ -32,8 +33,19 @@ export default class App extends React.Component {
 
         <RequestButton>사용자 정보 요청</RequestButton>
 
+        <button
+          type="button"
+          onClick={() => {
+            this.setState(({ isRenderUserList }) => ({
+              isRenderUserList: !isRenderUserList,
+            }));
+          }}
+        >
+          UserList 렌더링 여부: {this.state.isRenderUserList ? 'OK' : 'NO'}
+        </button>
+
         <div style={{ width: 420 }}>
-          <UserList aria-label="사용자 목록" />
+          {this.state.isRenderUserList && <UserList aria-label="사용자 목록" />}
         </div>
       </div>
     );

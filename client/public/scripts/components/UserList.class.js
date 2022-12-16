@@ -37,19 +37,23 @@ export var UserList = function (_React$Component) {
   _createClass(UserList, [{
     key: "render",
     value: function render() {
-      if (this.state.loading) {
+      var _this$state = this.state,
+        loading = _this$state.loading,
+        error = _this$state.error,
+        users = _this$state.users;
+      if (loading) {
         return React.createElement("div", {
           role: "alert"
         }, "\uB85C\uB529 \uC911....");
       }
-      if (this.state.error) {
+      if (error) {
         return React.createElement("div", {
           role: "alert"
-        }, "\uC624\uB958 \uBC1C\uC0DD! ", this.state.error.message);
+        }, "\uC624\uB958 \uBC1C\uC0DD! ", error.message);
       }
       return React.createElement("ul", _extends({
         className: "Users"
-      }, this.props), this.state.users.map(function (_ref) {
+      }, this.props), users.map(function (_ref) {
         var id = _ref.id,
           name = _ref.name,
           job = _ref.job,
@@ -66,54 +70,56 @@ export var UserList = function (_React$Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
-      var _this2 = this;
-      setTimeout(function () {
-        _this2.fetchUsers();
-      }, 2000);
+      console.log('mounted userlist component');
+      this.fetchUsers();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps, prevState) {
+      console.log('updated userlist component');
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      console.log('will unmount userlist component');
     }
   }, {
     key: "fetchUsers",
     value: function () {
       var _fetchUsers = _asyncToGenerator(_regeneratorRuntime().mark(function _callee() {
-        var response, users;
+        var response;
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.prev = 0;
                 _context.next = 3;
-                return fetch('/api/v1/users');
+                return axios.get('/api/v1/users');
               case 3:
                 response = _context.sent;
-                _context.next = 6;
-                return response.json();
-              case 6:
-                users = _context.sent;
                 this.setState({
-                  users: users
-                }, function () {
-                  console.log('updated users data from backend');
+                  users: response.data
                 });
-                _context.next = 13;
+                _context.next = 10;
                 break;
-              case 10:
-                _context.prev = 10;
+              case 7:
+                _context.prev = 7;
                 _context.t0 = _context["catch"](0);
                 this.setState({
                   error: _context.t0
                 });
-              case 13:
-                _context.prev = 13;
+              case 10:
+                _context.prev = 10;
                 this.setState({
                   loading: false
                 });
-                return _context.finish(13);
-              case 16:
+                return _context.finish(10);
+              case 13:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[0, 10, 13, 16]]);
+        }, _callee, this, [[0, 7, 10, 13]]);
       }));
       function fetchUsers() {
         return _fetchUsers.apply(this, arguments);

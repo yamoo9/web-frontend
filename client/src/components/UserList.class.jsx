@@ -19,17 +19,19 @@ export class UserList extends React.Component {
   // - componentWillUnmount
 
   render() {
-    if (this.state.loading) {
+    const { loading, error, users } = this.state;
+
+    if (loading) {
       return <div role="alert">로딩 중....</div>;
     }
 
-    if (this.state.error) {
-      return <div role="alert">오류 발생! {this.state.error.message}</div>;
+    if (error) {
+      return <div role="alert">오류 발생! {error.message}</div>;
     }
 
     return (
       <ul className="Users" {...this.props}>
-        {this.state.users.map(({ id, name, job, face }) => (
+        {users.map(({ id, name, job, face }) => (
           <UserItem key={id} id={id} name={name} job={job} face={face} />
         ))}
       </ul>
@@ -37,27 +39,30 @@ export class UserList extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.fetchUsers();
-    }, 2000);
+    console.log('mounted userlist component');
+    this.fetchUsers();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('updated userlist component');
+  }
+
+  componentWillUnmount() {
+    console.log('will unmount userlist component');
   }
 
   async fetchUsers() {
     try {
       // axios library
-      // const { data: users } = await axios.get('/api/v1/users');
+      const response = await axios.get('/api/v1/users');
 
-      const response = await fetch('/api/v1/users');
-      const users = await response.json();
+      // fetch api
+      // const response = await fetch('/api/v1/users');
+      // const users = await response.json();
 
-      this.setState(
-        {
-          users,
-        },
-        () => {
-          console.log('updated users data from backend');
-        }
-      );
+      this.setState({
+        users: response.data,
+      });
     } catch (error) {
       this.setState({
         error,
