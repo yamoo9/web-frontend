@@ -1,39 +1,61 @@
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      email: {
+        id: 'user-email',
+        label: '이메일',
+        type: 'email',
+      },
+      password: {
+        id: 'user-pass',
+        label: '패스워드',
+        type: 'password',
+      },
+    };
+  }
+
+  render() {
+    return (
+      <>
+        <FormControl id={this.state.email.id} type={this.state.email.type}>
+          {this.state.email.label}
+        </FormControl>
+        <FormControl
+          id={this.state.password.id}
+          type={this.state.password.type}
+        >
+          {this.state.password.label}
+        </FormControl>
+        <RequestButton>사용자 정보 요청</RequestButton>
+        <UserList />
+      </>
+    );
+  }
+}
+
+function FormControl(props /* { id, label, type = 'text' } */) {
+  let customId = `euid-${props.id}`;
   return (
-    <div id="app">
-      <RequestButton>사용자 정보 요청</RequestButton>
-      <UserList />
+    <div className="FormControl">
+      <label htmlFor={customId}>{props.children}</label>
+      <input id={customId} type={props.type} />
     </div>
   );
 }
 
+// 상태를 가지는 컴포넌트 (비즈니스 로직)
+// - stateful component
+// - container component
+
+// 상태(state, data)를 가지지 않는 컴포넌트 (재사용 하기 용이)
+// - stateless component
+// - presentational component
+
 function RequestButton(props) {
   function handleClick() {
     // React 답게 생각하기
-
-    // React 답지 않게 생각하기 (기존 경험 답습)
-    // 서버 데이터 요청/응답 ....
-    fetchUsers();
-  }
-
-  async function fetchUsers() {
-    try {
-      const response = await fetch('http://localhost:4000/api/v1/users');
-      const users = await response.json();
-      // DOM 스크립트 → UI 업데이트
-      renderUserItems(users);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  function renderUserItems(users) {
-    const userList = document.querySelector('.users');
-    let renderingHtmlString = users.reduce((htmlCode, { name }) => {
-      return htmlCode + `<li class="user"><strong>${name}</strong></li>`;
-    }, '');
-    console.log(renderingHtmlString);
-    userList?.insertAdjacentHTML('beforeend', renderingHtmlString);
   }
 
   return (
@@ -51,4 +73,4 @@ function UserList(props) {
   return <ul className="users" {...props} />;
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+ReactDOM.createRoot(document.getElementById('react-app')).render(<App />);
