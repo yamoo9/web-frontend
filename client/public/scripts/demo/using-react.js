@@ -1,1 +1,22 @@
-var React=globalThis.React,ReactDOM=globalThis.ReactDOM;var RequestButton=function RequestButton(){return React.createElement("button",{type:"button",className:"button",onClick:function onClick(){console.log("React \uC694\uC18C \uD074\uB9AD")}},"\uC0AC\uC6A9\uC790 ","\uC815\uBCF4 ","\uC694\uCCAD")};var UserList=function UserList(){return React.createElement("ul",{className:"users"})};var App=function App(){return React.createElement(React.StrictMode,null,React.createElement(RequestButton),React.createElement(UserList))};var container=document.getElementById("root");var reactDomRoot=ReactDOM.createRoot(container);reactDomRoot.render(React.createElement(App));
+var React = globalThis.React,
+  ReactDOM = globalThis.ReactDOM;
+var RequestButton = function RequestButton() {
+  return React.createElement('button', {
+    type: 'button',
+    className: 'button',
+    onClick: function onClick() {
+      console.log('React 요소 클릭');
+    }
+  }, '사용자 ', '정보 ', '요청');
+};
+var UserList = function UserList() {
+  return React.createElement('ul', {
+    className: 'users'
+  });
+};
+var App = function App() {
+  return React.createElement(React.StrictMode, null, React.createElement(RequestButton), React.createElement(UserList));
+};
+var container = document.getElementById('root');
+var reactDomRoot = ReactDOM.createRoot(container);
+reactDomRoot.render(React.createElement(App));

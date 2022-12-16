@@ -17,7 +17,7 @@ app.use(express.static(PUBLIC_DIR));
 
 /* Middlewares -------------------------------------------------------------- */
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan('tiny'));
 

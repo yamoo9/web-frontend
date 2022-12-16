@@ -1,0 +1,46 @@
+@use 'sass:map';
+@use 'sass:math';
+
+$user: (
+  size: math.div(120px, 2),
+);
+
+.Users {
+  list-style: none;
+  padding-left: 0;
+}
+
+.User {
+  margin-bottom: 8px;
+  .card {
+    display: flex;
+    flex-flow: row;
+    gap: 12px;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .face {
+    $size: map.get($user, 'size');
+    width: $size;
+    height: $size;
+  }
+  .info {
+    display: flex;
+    flex-flow: column;
+  }
+  .name {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #121212;
+  }
+  .job {
+    font-size: 0.8rem;
+    color: #767676;
+  }
+}
