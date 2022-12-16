@@ -32,7 +32,7 @@ export default class App extends React.Component {
         </FormControl>
         <RequestButton>사용자 정보 요청</RequestButton>
         <div style={{ width: 420 }}>
-          <UserList />
+          <UserList aria-label="사용자 목록" />
         </div>
       </>
     );

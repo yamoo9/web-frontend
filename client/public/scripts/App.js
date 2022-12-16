@@ -46,7 +46,9 @@ var App = function (_React$Component) {
         style: {
           width: 420
         }
-      }, React.createElement(UserList, null)));
+      }, React.createElement(UserList, {
+        "aria-label": "\uC0AC\uC6A9\uC790 \uBAA9\uB85D"
+      })));
     }
   }]);
   return App;
