@@ -34,7 +34,14 @@ var App = function (_React$Component) {
         id: 'user-pass',
         label: '패스워드',
         type: 'password'
-      }
+      },
+      checked: true
+    });
+    _defineProperty(_assertThisInitialized(_this), "handleChange", function (e) {
+      console.log(e.target);
+      _this.setState({
+        checked: !_this.state.checked
+      });
     });
     return _this;
   }
@@ -47,7 +54,22 @@ var App = function (_React$Component) {
           maxWidth: 1140,
           margin: '80px auto'
         }
-      }, React.createElement(RequestButton, null, "\uC0AC\uC6A9\uC790 \uC815\uBCF4 \uC694\uCCAD"), React.createElement("button", {
+      }, React.createElement("div", {
+        style: {
+          display: 'flex',
+          gap: 20
+        }
+      }, React.createElement("input", {
+        type: "checkbox",
+        checked: this.state.checked,
+        onChange: this.handleChange
+      }), React.createElement("input", {
+        type: "checkbox",
+        onChange: function onChange(e) {
+          console.log(e.target);
+          console.log(e.target.checked);
+        }
+      })), React.createElement(RequestButton, null, "\uC0AC\uC6A9\uC790 \uC815\uBCF4 \uC694\uCCAD"), React.createElement("button", {
         type: "button",
         onClick: function onClick() {
           _this2.setState(function (_ref) {
