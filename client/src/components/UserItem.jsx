@@ -1,4 +1,4 @@
-export function UserItem({ id, face, name, job }) {
+export function UserItem({ id, face, name, job, onDelete }) {
   return (
     <li className="User">
       <a href={`/user/${id}`}>
@@ -10,6 +10,21 @@ export function UserItem({ id, face, name, job }) {
           </figcaption>
         </figure>
       </a>
+      <UserItem.DeleteButton
+        onClick={() => {
+          onDelete(id);
+        }}
+      >
+        삭제
+      </UserItem.DeleteButton>
     </li>
   );
 }
+
+// Compound Component Pattern
+// React.StrictMode
+// React.Fragment
+
+UserItem.DeleteButton = function DeleteUserItemButton(props) {
+  return <button type="button" className="button--delete" {...props} />;
+};
